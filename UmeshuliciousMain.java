@@ -22,7 +22,7 @@ public class UmeshuliciousMain {
 		GameEngine umeshEngine = new GameEngine();
 		umeshEngine.drawGame();
 		StdDraw.show(5);
-		long maxTime = 110000000;
+		long maxTime = 20000000;
 		StdAudio.loop("sounds/dontletme.wav");
 
 		while (!umeshEngine.isOver()) {
@@ -39,11 +39,12 @@ public class UmeshuliciousMain {
 			for (time = 0; time < maxTime; time++) {
 				for (i = 0; i < 4; i++) {
 					if (currentKey == i && StdDraw.isKeyPressed(umeshEngine.getKey(i))) {
+						StdDraw.clear();
 						umeshEngine.setOuterLoop(true);
 						umeshEngine.setUmeshWin(false);
 						umeshEngine.setMoved(false);
-						if (maxTime > 8000000) {
-							maxTime = maxTime - 5000000;
+						if (maxTime > 9500000) {
+							maxTime = maxTime - 3000000;
 						}
 						for (keyPressed = 0; keyPressed < 100000000; keyPressed++) {
 							if (!StdDraw.isKeyPressed(umeshEngine.getKey(i))) {

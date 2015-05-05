@@ -126,9 +126,13 @@ public class GameEngine {
         }
     }
 
+    /**
+     * Sets started to true.
+     */
     public void gameStart() {
         started = true;
     }
+
     /**
      * Returns if game has ended or not.
      * @return Whether game is over.
